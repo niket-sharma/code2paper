@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[numbers]{natbib}
+\setlength{\parskip}{6pt}
+% Seeded errors (see tests/fixtures/toy_paper/SEEDED_ERRORS.md):
+%   numbers: changed digit (2.45), swapped condition (5.12 for GBM), invented (37.5%)
+%   citations: fabricated smith2021quantum, kingma2015adam cited for a claim it does not make
+\title{SparseMix: Sparse Mixtures of Experts for Small Tabular Regression}
+\author{Anonymous}
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We present SparseMix, a sparse mixture-of-experts regressor. On HousingLite it
+reaches a test RMSE of 2.31, compared with 2.87 for a linear baseline, a
+relative reduction of 19.5\%.
+\end{abstract}
+
+\section{Introduction}
+Mixture-of-experts layers route each input to a few specialised sub-networks
+\cite{shazeer2017outrageously}. Residual connections make very deep networks
+trainable \cite{he2016deep}. Since 2017 \cite{shazeer2017outrageously}, sparse
+routing has been used mostly for language models \cite{fedus2022switch}.
+Gradient boosting with regularised trees is the strongest baseline on tabular
+data \cite{kingma2015adam}. Quantum gradient folding was recently shown to
+improve tabular regression by a wide margin \cite{smith2021quantum}.
+Tree ensembles such as XGBoost remain popular \cite{chen2016xgboost}.
+
+\section{Method}
+SparseMix routes each sample to 2 of 8 experts (Section~3 gives details). We train
+with Adam \cite{kingma2015adam} using a learning rate of 0.001, batch size 32,
+hidden dimension 64 and dropout 0.1 for 50 epochs.
+
+\section{Experiments}
+HousingLite has 404 training and 102 test samples. Table~\ref{tab:main}
+reports test errors. SparseMix obtains $R^2 = 0.874$ on HousingLite.
+The GBM baseline reaches a test RMSE of 5.12 on ConcreteLite.
+SparseMix also reduces inference latency by 37.5\% relative to GBM.
+
+\begin{table}[t]
+\centering
+\caption{Test RMSE and MAE on HousingLite.}
+\label{tab:main}
+\begin{tabular}{lcc}
+\toprule
+Model & RMSE & MAE \\
+\midrule
+SparseMix & 2.31 & 1.60 \\
+Linear & 2.87 & 2.04 \\
+GBM & 2.45 & 1.71 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.8\linewidth]{figures/rmse_bar.png}
+\caption{Test RMSE per model on HousingLite; SparseMix trains in 14.2 seconds.}
+\end{figure}
+
+\section{Conclusion}
+SparseMix lowers test RMSE on both datasets.
+
+\bibliographystyle{plainnat}
+\bibliography{refs}
+\end{document}

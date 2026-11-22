@@ -1,0 +1,10 @@
+{
+  "sparsemix": {
+    "HousingLite": {"test_r2": 0.8741, "n_params": 12544},
+    "ConcreteLite": {"test_r2": 0.9032, "n_params": 12544}
+  },
+  "dataset": {
+    "HousingLite": {"n_train": 404, "n_test": 102},
+    "ConcreteLite": {"n_train": 824, "n_test": 206}
+  }
+}

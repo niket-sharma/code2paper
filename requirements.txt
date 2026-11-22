@@ -1,0 +1,6 @@
+# code2paper helper scripts use only the Python standard library at runtime.
+# Optional:
+pypdf>=4.0        # page counts in c2p-compile-check (falls back to a regex)
+# Development:
+pytest>=8.0
+ruff>=0.6

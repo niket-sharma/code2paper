@@ -1,0 +1,6 @@
+{"task_id": "T6140be356b", "support": "supports", "rationale": "Abstract describes a sparsely-gated MoE layer where a gating network selects a sparse combination of experts per example."}
+{"task_id": "T810c4c33d4", "support": "supports", "rationale": "Abstract presents residual learning to ease training of substantially deeper networks."}
+{"task_id": "T6138b9b721", "support": "partial", "rationale": "Abstract applies sparse MoE to language modeling and translation, but says nothing about later usage trends."}
+{"task_id": "T4ba21ff4fc", "support": "unsupported", "rationale": "Abstract is about the Adam stochastic optimizer; it does not discuss gradient boosting or tabular baselines."}
+{"task_id": "Ta34045f15b", "support": "supports", "rationale": "Abstract says XGBoost is a scalable tree boosting system used widely by data scientists."}
+{"task_id": "Tc9cf82dfac", "support": "supports", "rationale": "Sentence only names Adam as the optimizer; the abstract introduces Adam."}

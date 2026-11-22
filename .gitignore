@@ -1,0 +1,31 @@
+# upstream dependency (cloned by scripts/install.sh at a pinned commit)
+vendor/
+
+# per-paper workspaces
+workspace/
+workspaces/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+build/
+dist/
+
+# LaTeX build artefacts
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.bbl
+*.blg
+!tests/fixtures/**/*.log
+
+.env

@@ -1,0 +1,17 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex)
+entering extended mode
+(./paper.tex
+LaTeX2e <2022-11-01> patch level 1
+LaTeX Warning: Reference `tab:missing' on page 2 undefined on input line 41.
+
+LaTeX Warning: Citation `fedus2022switch' on page 1 undefined on input line 24.
+
+! LaTeX Error: File `figures/missing_plot.png' not found.
+
+Overfull \hbox (3.2pt too wide) in paragraph at lines 30--31
+[]\T1/cmr/m/n/10.95 small overflow
+Overfull \hbox (25.71pt too wide) in alignment at lines 44--52
+[][][]
+LaTeX Warning: There were undefined references.
+Output written on paper.pdf (12 pages, 245123 bytes).
+Transcript written on paper.log.

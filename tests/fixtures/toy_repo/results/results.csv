@@ -1,0 +1,7 @@
+model,dataset,test_rmse,test_mae,train_time_s
+sparsemix,HousingLite,2.3142,1.6021,14.2
+linear,HousingLite,2.8731,2.0412,0.3
+gbm,HousingLite,2.4410,1.7105,9.8
+sparsemix,ConcreteLite,5.1203,3.9011,21.7
+linear,ConcreteLite,10.4420,8.2306,0.4
+gbm,ConcreteLite,5.6017,4.1188,12.5

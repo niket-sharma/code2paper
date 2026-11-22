@@ -1,0 +1,6 @@
+2026-10-01 10:00:00 INFO start training dataset=HousingLite
+2026-10-01 10:00:02 INFO epoch=1 train_loss=12.4031 val_loss=11.9822
+2026-10-01 10:00:05 INFO epoch=25 train_loss=3.1207 val_loss=3.4410
+2026-10-01 10:00:08 INFO epoch=50 train_loss=2.0115 val_loss=2.5532
+2026-10-01 10:00:08 INFO [test] rmse=2.3142 mae=1.6021
+2026-10-01 10:00:08 INFO expert utilisation entropy: 1.9871
